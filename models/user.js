@@ -1,0 +1,61 @@
+'use strict';
+module.exports = (sequelize, DataTypes) => {
+  const User = sequelize.define('User', {
+    auth: DataTypes.STRING,
+    policyagreed: DataTypes.BOOLEAN,
+    deleted: DataTypes.BOOLEAN,
+    confirmed: DataTypes.BOOLEAN,
+    suspended: DataTypes.BOOLEAN,
+    mnehostid: DataTypes.INTEGER,
+    username: DataTypes.STRING,
+    password: DataTypes.STRING,
+    idnumber: DataTypes.STRING,
+    firstname: DataTypes.STRING,
+    lastname: DataTypes.STRING,
+    email: DataTypes.STRING,
+    emailstop: DataTypes.BOOLEAN,
+    facebook: DataTypes.STRING,
+    instagram: DataTypes.STRING,
+    twitter: DataTypes.STRING,
+    whatsapp: DataTypes.STRING,
+    phone: DataTypes.STRING,
+    institution: DataTypes.STRING,
+    department: DataTypes.STRING,
+    address: DataTypes.STRING,
+    city: DataTypes.STRING,
+    country: DataTypes.STRING,
+    lang: DataTypes.STRING,
+    calendartype: DataTypes.STRING,
+    theme: DataTypes.STRING,
+    timezone: DataTypes.STRING,
+    firstaccess: DataTypes.BIGINT,
+    lastaccess: DataTypes.BIGINT,
+    lastlogin: DataTypes.BIGINT,
+    currentlogin: DataTypes.BIGINT,
+    lastip: DataTypes.STRING,
+    secret: DataTypes.STRING,
+    picture: DataTypes.BIGINT,
+    url: DataTypes.STRING,
+    description: DataTypes.STRING,
+    descriptionformat: DataTypes.STRING,
+    mailformat: DataTypes.BOOLEAN,
+    maildigest: DataTypes.BOOLEAN,
+    maildisplay: DataTypes.INTEGER,
+    autosubscribe: DataTypes.BOOLEAN,
+    trackforum: DataTypes.BOOLEAN,
+    timecreated: DataTypes.BIGINT,
+    timemodified: DataTypes.BIGINT,
+    trustbitmask: DataTypes.INTEGER,
+    imgalt: DataTypes.STRING,
+    lastnamephonetic: DataTypes.STRING,
+    firstnamephonetic: DataTypes.STRING,
+    middlename: DataTypes.STRING,
+    alternatename: DataTypes.STRING
+  }, {
+    timestamps: false,
+  });
+  User.associate = function(models) {
+    // associations can be defined here
+  };
+  return User;
+};
